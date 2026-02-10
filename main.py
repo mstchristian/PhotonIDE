@@ -4,5 +4,18 @@
 
 # main.py - Main entry point for the application
 
+import time
+
+from utils.logger import Logger
+
 if __name__ == "__main__":
-    print("Hello, World!")
+    logger = Logger("Main")
+    
+    logger.log("This is a info message.")
+    logger.warn("This is a warning message.")
+    logger.error("This is an error message.")
+    
+    time.sleep(5)
+    
+    logger.log("This is another info message after 5 seconds.")
+    logger.log("This is yet another info message.")
